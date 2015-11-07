@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Achievement_Evaluation_System.Models.Achievement>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Achievement_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Achievement_description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Achievement_completion_time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Achivement_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Achievement_status)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Achievement_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Achievement_description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Achievement_completion_time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Achivement_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Achievement_status)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

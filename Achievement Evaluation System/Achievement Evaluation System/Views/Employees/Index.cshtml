@@ -1,0 +1,99 @@
+﻿@model IEnumerable<Achievement_Evaluation_System.Models.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.National_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sex)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobile_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Birth_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Job_position)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_general_manager)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_manager)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_supervisor)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.National_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sex)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mobile_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Birth_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Job_position)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_general_manager)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_manager)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_supervisor)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

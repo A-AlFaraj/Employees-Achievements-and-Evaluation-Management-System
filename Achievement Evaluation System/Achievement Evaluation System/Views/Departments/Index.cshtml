@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Achievement_Evaluation_System.Models.Department>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Department_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Acronym)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Department_description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Department_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Acronym)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Department_description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

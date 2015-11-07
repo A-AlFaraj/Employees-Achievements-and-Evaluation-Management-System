@@ -1,0 +1,114 @@
+﻿@model Achievement_Evaluation_System.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.National_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.National_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sex)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sex)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mobile_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mobile_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Birth_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Birth_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Job_position)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Job_position)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_general_manager)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_general_manager)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_manager)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_manager)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_supervisor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_supervisor)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

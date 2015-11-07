@@ -1,0 +1,42 @@
+﻿@model Achievement_Evaluation_System.Models.Department
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Department</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Department_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Department_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Acronym)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Acronym)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Department_description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Department_description)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
